@@ -3,6 +3,7 @@ sudo: false
 go:
   - 1.x
 before_install:
+  - export GO111MODULE=on
   - go get github.com/mattn/goveralls
   - if ! go get github.com/golang/tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
 script:
